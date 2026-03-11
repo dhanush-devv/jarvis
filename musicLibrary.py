@@ -1,0 +1,22 @@
+music = {
+    "believer": "https://www.youtube.com/watch?v=7wtfhZwyrcc",
+    "shape of you": "https://www.youtube.com/watch?v=JGwWNGJdvx8",
+    "perfect": "https://www.youtube.com/watch?v=2Vv-BfVoq4g",
+    "unstoppable": "https://www.youtube.com/watch?v=cxjvTXo9WWM",
+    "levitating": "https://www.youtube.com/watch?v=TUVcZfQe-Kw",
+    "faded": "https://www.youtube.com/watch?v=60ItHLz5WEA",
+    "alone": "https://www.youtube.com/watch?v=1-xGerv5FOk",
+    "on my way": "https://www.youtube.com/watch?v=dhYOPzcsbGM",
+    "let me love you": "https://www.youtube.com/watch?v=SMs0GnYze34",
+    "closer": "https://www.youtube.com/watch?v=PT2_F-1esPk",
+    "senorita": "https://www.youtube.com/watch?v=Pkh8UtuejGw",
+    "bad guy": "https://www.youtube.com/watch?v=DyDfgMOUjCI",
+    "hymn for the weekend": "https://www.youtube.com/watch?v=YykjpeuMNEk",
+    "counting stars": "https://www.youtube.com/watch?v=hT_nvWreIhg",
+    "thunder": "https://www.youtube.com/watch?v=fKopy74weus",
+    "cheap thrills": "https://www.youtube.com/watch?v=nYh-n7EOtMA",
+    "attention": "https://www.youtube.com/watch?v=nfs8NYg7yQM",
+    "memories": "https://www.youtube.com/watch?v=SlPhMPnQ58k",
+    "love me like you do": "https://www.youtube.com/watch?v=AJtDXIazrMo",
+    "titanium": "https://www.youtube.com/watch?v=JRfuAukYTKg"
+}
