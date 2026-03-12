@@ -7,20 +7,24 @@ from openai import OpenAI
 from gtts import gTTS
 import pygame
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
 recognizer=sr.Recognizer()
 engine=pyttsx3.init()
-newsapi="f7975234d7f54911a209cb96ff27385d"
+newsapi=os.getenv("NEWS_API_KEY")
+
 
 def speak_old(text):
     engine.say(text)
     engine.runAndWait()
 
 def speak(text):
-     tts = gTTS(text)
-     tts.save('temp.mp3')
-      # Initialize Pygame mixer
+    tts = gTTS(text)
+    tts.save('temp.mp3') 
+
+    # Initialize Pygame mixer
     pygame.mixer.init()
 
     # Load the MP3 file
@@ -36,9 +40,10 @@ def speak(text):
     pygame.mixer.music.unload()
     os.remove("temp.mp3")
 
+    
 def aiProcess(command):
     client=OpenAI(
-    api_key="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"
+    api_key= os.getenv("OPENAI_API_KEY")
 )
 
     completion=client.chat.completions.create(
@@ -57,7 +62,8 @@ def processCommand(c):
         webbrowser.open("https://facebook.com")
     elif "open youtub" in c.lower():
         webbrowser.open("https://youtube.com")
-    elif c.lower().startsWith("play"):
+
+    elif "play" in c.lower():
         song=c.lower().split(" ")[1]
         link=musicLibrary.music[song]
         webbrowser.open(link)
@@ -94,10 +100,12 @@ if __name__=="__main__":
         try:
             with sr.Microphone() as source:
                 print("Listening...!")
-            audio = r.listen(source,timeout=2,phrase_time_limit=1)
-            word=r.recognize_google(audio)
+                audio = r.listen(source,timeout=2,phrase_time_limit=1)
+                word=r.recognize_google(audio)
             print(word)
-            if(word.lower()=="jarvis"):
+            print(word)
+
+            if "jarvis" in word.lower():
                 speak("Yes")
                 #Listen for command
                 with sr.Microphone() as source:

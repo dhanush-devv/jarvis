@@ -1,7 +1,11 @@
 from openai import OpenAI
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 client=OpenAI(
-    api_key="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"
+    api_key= os.getenv("OPENAI_API_KEY")
 )
 
 completion=client.chat.completions.create(
